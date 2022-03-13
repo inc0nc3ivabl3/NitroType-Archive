@@ -28,7 +28,7 @@
     alert(`Attempting to generate ${amount} accounts... Please wait for the next alert.`)
 
     for (var i = 0; i < parseInt(amount); i++) {
-        post('https://www.nitrotype.com/api/register', `username=${baseUsername+i}&password=${password}&acceptPolicy=on&receiveContact=&tz=America%2FChicago&qualifying=1&avgSpeed=88&avgAcc=84&carID=9&raceSounds=only_fx`)
+        post('https://www.nitrotype.com/api/v2/auth/register/username', `username=${baseUsername+i}&password=${password}&acceptPolicy=on&receiveContact=&tz=America%2FChicago&qualifying=1&avgSpeed=88&avgAcc=84&carID=9&raceSounds=only_fx`)
         .then(response => {
             console.log(response)
         })
